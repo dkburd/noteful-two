@@ -7,7 +7,7 @@ import sampleData from "./sampleData";
 import Notes from "./Notes";
 import Folders from "./Folders";
 import Folder from "./Folder";
-
+import Note from "./Note";
 // function App() {
 //   return (
 //     <div className="App">
@@ -51,6 +51,12 @@ class App extends Component {
               <Folder {...props} notesList={this.state.notes} />
             )}
           />
+          <Route
+            path="/note/:id"
+            // this render is needed to pass the props.match.params from the url
+            render={(props) => <Note {...props} notesList={this.state.notes} />}
+          />
+
           {/* <Route
             path="/folder/:id"
             render={(props) => (

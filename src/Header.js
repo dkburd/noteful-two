@@ -5,20 +5,26 @@ export class Header extends Component {
   render() {
     return (
       <header className="App__header">
-        <h1>
+        <h1 style={center}>
           <Link to="/">Noteful</Link>
         </h1>
-        <ul>
-          {/* <li>
+        {/* <ul>
+          <li>
             <Link to="/">Noteful</Link>
-          </li> */}
+          </li>
           <li>
             <Link to="/about">About</Link>
           </li>
-        </ul>
+        </ul> */}
       </header>
     );
   }
 }
 
 export default Header;
+
+const center = {
+  margin: "0 auto",
+  textAlign: "center",
+  padding: "10px",
+};
